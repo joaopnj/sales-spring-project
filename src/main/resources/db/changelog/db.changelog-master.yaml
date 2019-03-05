@@ -1,0 +1,50 @@
+databaseChangeLog:
+  - changeset:
+      id: 1
+      author: João Jardim
+      changes:
+        - createTable:
+          tableName: saler
+          columns:
+            - column:
+              name: saler_id
+              type: int
+              autoIncrement: true
+              constraints:
+                primaryKey: true
+                nullable: false
+            - column:
+              name: name
+              type: varchar(255)
+            - column:
+              name: cpf
+              type: varchar(255)
+        - createTable:
+          tableName: client
+          columns:
+            - column:
+                name: client_id
+                type: int
+                autoIncrement: true
+                constraints:
+                  primaryKey: true
+                  nullable: false
+            - column:
+                name: name
+                type: varchar(255)
+            - column:
+                name: sex
+                type: varchar(255)
+            - column:
+                name: cpf
+                type: varchar(255)
+        - addForeignKeyConstraint:
+            baseColumnNames: saler_id
+            baseTableName: client
+            constraintName: fk_saler_id
+            deferrable: true
+            initiallyDeferred: true
+            onDelete: CASCADE
+            onUpdate: RESTRICT
+            referencedColumnNames: client_id
+            referencedTableName: client

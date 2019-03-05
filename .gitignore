@@ -28,3 +28,4 @@ mvnw
 mvnw.cmd
 sales-spring-project.iml
 *.iml
+.DS_Store
