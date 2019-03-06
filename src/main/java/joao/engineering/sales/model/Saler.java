@@ -19,4 +19,7 @@ public class Saler {
     @Column(name = "cpf")
     private String cpf;
 
+    public Saler(Long id) {
+        this.id = id;
+    }
 }

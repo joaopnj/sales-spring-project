@@ -22,6 +22,7 @@ public class Client {
     private String cpf;
 
     @Column(name = "sex")
+    @Enumerated(EnumType.STRING)
     private Sex sex;
 
     @ManyToOne
