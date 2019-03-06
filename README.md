@@ -1,7 +1,7 @@
 # Sales Spring Project
 
 ### Description
-A sales spring project for practical purpose
+A Spring Java project for practical purpose
 
 
 ### Tools used
